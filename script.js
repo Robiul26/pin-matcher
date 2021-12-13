@@ -20,8 +20,12 @@ generateBtn.addEventListener("click", function () {
 
 document.getElementById("buttons").addEventListener("click", function (e) {
     let element = Number(e.target.innerText);
-    // console.log(typeof element);
+    console.log(element);
+    console.log(typeof element);
     document.getElementById("input-number").value += element;
+    if (e.target.innerText == "AC") {
+        document.getElementById("input-number").value = "";
+    }
     if (e.target.innerText == "C") {
         document.getElementById("input-number").value = "";
     }
