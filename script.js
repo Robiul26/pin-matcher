@@ -3,10 +3,11 @@ let generateOutput = document.getElementById("generate-output");
 let inputNumber = document.getElementById("input-number");
 
 let errorCoutn = 3;
+
+// for generate random number
 generateBtn.addEventListener("click", function () {
     errorCoutn = 3;
     let randomNumber = Math.floor(1000 + Math.random() * 9000);
-    // console.log(randomNumber);
     generateOutput.value = randomNumber;
     inputNumber.value = "";
     document.getElementById("left-time").style.display = "block";
@@ -18,6 +19,8 @@ generateBtn.addEventListener("click", function () {
     inputNumber.style.color = "#fff";
 });
 
+
+// For input numbers
 document.getElementById("buttons").addEventListener("click", function (e) {
     let element = Number(e.target.innerText);
     console.log(element);
@@ -25,25 +28,28 @@ document.getElementById("buttons").addEventListener("click", function (e) {
     document.getElementById("input-number").value += element;
     if (e.target.innerText == "AC") {
         document.getElementById("input-number").value = "";
+        inputNumber.style.color = "#fff";
     }
     if (e.target.innerText == "C") {
         document.getElementById("input-number").value = "";
     }
 });
+
+// For modal hidden
 document.getElementById("modal-ok-btn").addEventListener("click", function () {
     document.getElementById("my-modal").classList.remove("modal");
     document.querySelector(".modal-content").style.display = "none";
 });
+
+// For submit
 document.getElementById("submit-btn").addEventListener("click", function () {
     let outputPin = generateOutput.value;
     let inputPin = Number(inputNumber.value);
     if (outputPin == '') {
-        // alert("");
         document.getElementById("my-modal").classList.add("modal");
         document.getElementById("modal-text").innerText = "Generate Pin First";
         document.querySelector(".modal-content").style.display = "block";
     } else if (inputPin == '') {
-        // alert("");
         document.getElementById("my-modal").classList.add("modal");
         document.getElementById("modal-text").innerText = "Input fill first!";
         document.querySelector(".modal-content").style.display = "block";
@@ -65,8 +71,6 @@ document.getElementById("submit-btn").addEventListener("click", function () {
                 document.getElementById("submit-btn").setAttribute("disabled", true);
                 document.getElementById("submit-btn").style.cursor = "not-allowed";
             }
-
-
         }
     }
 });

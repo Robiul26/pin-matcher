@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     user-select: none;
+    transition: .5s ease-in-out;
 }
 body{
     background: #222121;
@@ -100,14 +101,21 @@ body{
     text-transform: uppercase;
     font-weight: 600;
 }
+.btn:hover{
+    background: #4d4da0;
+}
 .circle-btn{
     border-radius: 50%;
     width: 115px;
     padding: 10px;
     height: 115px;
-    border: 7px solid #4d4da0;
-    
+    border: 7px solid #4d4da0;    
     box-shadow: 5px 5px 10px #242429;
+    transition: .5s ease-in-out;
+}
+.circle-btn:hover{
+    background: #3a3a50;
+    border: 7px solid #6666cf;  
 }
 
 .error, .success{
