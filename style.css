@@ -68,6 +68,8 @@
     padding: 10px;
     height: 115px;
     border: 7px solid #4d4da0;
+    
+    box-shadow: 5px 5px 10px #242429;
 }
 
 .error, .success{
