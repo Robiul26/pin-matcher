@@ -10,15 +10,21 @@
 </head>
 
 <body>
-    <div class="contianer">
-        <div class="box-container">
+    <div class="contianer ">
+        <div id="my-modal" class="">
+            <div class="modal-content">
+                <p id="modal-text">Please Fill input field first!</p>
+                <button id="modal-ok-btn" class="btn modal-btn">OK</button>
+            </div>
+        </div>
+        <div class="box-container ">
             <div class="generator-box">
-                <input type="text" class="form-control">
-                <button class="btn circle-btn">Generate Pin</button>
+                <input id="generate-output" type="text" class="form-control" disabled>
+                <button id="generate-btn" class="btn circle-btn">Generate Pin</button>
             </div>
             <div class="submit-box">
-                <input type="text" class="form-control">
-                <div class="buttons">
+                <input id="input-number" type="text" class="form-control" disabled>
+                <div class="buttons" id="buttons">
                     <button>7</button>
                     <button>8</button>
                     <button>9</button><br />
@@ -32,13 +38,15 @@
                     <button>0</button>
                     <button>C</button>
                 </div>
-                <button class="btn">Submit</button>
+                <button id="submit-btn" class="btn">Submit</button>
                 <p id="left-time">3 try left</p>
             </div>
         </div>
-        <p class="error">Pin Didn't Match Please try again!</p>
-        <p class="success">Pin Matched... Secret door is opening for you!</p>
+        <p class="error" id="error">Pin Didn't Match Please try again!</p>
+        <p class="success" id="success">Pin Matched... Secret door is opening for you!</p>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
