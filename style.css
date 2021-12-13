@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contianer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #222121;
+    height: 100vh;
+}
+.box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.generator-box, .submit-box{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: #3a3a50;
+
+}
+.generator-box{
+    height: 330px;
+    gap: 60px;
+}
+.form-control{
+    height: 40px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    user-select: none;
+    border-radius: 3px;
+    background: #4a4a5f;
+    border: 1px solid gray;
+    color: #fff;
+
+}
+.btn{
+    background: #6666cf;    
+    border: none;
+    outline: none;
+    border: 1px solid #6666cf;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.circle-btn{
+    border-radius: 50%;
+    width: 115px;
+    padding: 10px;
+    height: 115px;
+    border: 7px solid #4d4da0;
+}
+
+.error, .success{
+    background: #3a3a50;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+.error{
+    color: red;
+}
+.success{    
+    color: #fff;
+}
+.buttons{
+    margin-top: 10px;
+}
+#left-time{
+    color: red;
+    padding-top: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.buttons button{
+    background: #535361;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    width: 60px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 5px 5px 2px #242429;
+}
+@media(max-width:992px){
+    .box-container{
+        flex-direction: column;
+    }
+    
+    .contianer{
+        height: auto;
+        padding: 5% 5%;
+    }
+    .box-container{
+        gap: 10px;
+    }
+    .generator-box{
+        height: auto;
+        gap: 0;
+    }
+}
