@@ -23,8 +23,7 @@ generateBtn.addEventListener("click", function () {
 // For input numbers
 document.getElementById("buttons").addEventListener("click", function (e) {
     let element = Number(e.target.innerText);
-    console.log(element);
-    console.log(typeof element);
+
     document.getElementById("input-number").value += element;
     if (e.target.innerText == "AC") {
         document.getElementById("input-number").value = "";
@@ -65,7 +64,7 @@ document.getElementById("submit-btn").addEventListener("click", function () {
             inputNumber.style.color = "red";
 
             errorCoutn--;
-            console.log(errorCoutn);
+
             document.getElementById("left-time").innerHTML = `${errorCoutn} try left`;
             if (errorCoutn == 0) {
                 document.getElementById("submit-btn").setAttribute("disabled", true);
