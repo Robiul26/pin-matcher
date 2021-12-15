@@ -32,6 +32,7 @@ document.getElementById("buttons").addEventListener("click", function (e) {
     }
     if (e.target.innerText == "C") {
         document.getElementById("input-number").value = allNumbers.slice(0, -4);
+        inputNumber.style.color = "#fff";
     }
 });
 
