@@ -24,13 +24,14 @@ generateBtn.addEventListener("click", function () {
 document.getElementById("buttons").addEventListener("click", function (e) {
     let element = Number(e.target.innerText);
 
-    document.getElementById("input-number").value += element;
+    let allNumbers = document.getElementById("input-number").value += element;
+
     if (e.target.innerText == "AC") {
         document.getElementById("input-number").value = "";
         inputNumber.style.color = "#fff";
     }
     if (e.target.innerText == "C") {
-        document.getElementById("input-number").value = "";
+        document.getElementById("input-number").value = allNumbers.slice(0, -4);
     }
 });
 
